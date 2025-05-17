@@ -9,7 +9,7 @@ public class Recursion {
 
         int n = Integer.parseInt(scanner.nextLine());
 
-        //long fibonacci = getFibonacci(n);
+        long fibonacci = getFibonacci(n);
 
         //Рекурсията представлява метод, който извиква сам себе си, но трябва да сложим дъно/база(да ограничим програмата), където трябва да прекратим рекурсията
 
@@ -17,8 +17,8 @@ public class Recursion {
 
     }
 
-   /* private static long getFibonacci(int n) {
+    private static long getFibonacci(int n) {
 
         return getFibonacci(n - 1);
-    }*/
+    }
 }
