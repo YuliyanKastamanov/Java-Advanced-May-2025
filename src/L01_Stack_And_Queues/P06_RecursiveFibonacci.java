@@ -24,7 +24,7 @@ public class P06_RecursiveFibonacci {
     private static long getFibonacci(int n) {
 
         if(n <= 1){
-            return 1;
+            return n;
         }else {
             if(fibonacciMemory[n] != 0){
                 return fibonacciMemory[n];

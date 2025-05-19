@@ -21,7 +21,7 @@ public class P06_RecursiveFibonacci_Second {
             third = first + second;
         }
 
-        System.out.println(second);
+        System.out.println(first);
 
 
     }
