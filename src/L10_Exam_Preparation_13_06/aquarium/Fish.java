@@ -1,4 +1,4 @@
-package L10_Exam_Preparation.aquarium;
+package L10_Exam_Preparation_13_06.aquarium;
 
 public class Fish {
 

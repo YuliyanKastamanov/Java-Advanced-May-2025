@@ -1,4 +1,4 @@
-package L10_Exam_Preparation;
+package L10_Exam_Preparation_13_06;
 
 import java.util.*;
 import java.util.stream.Collectors;
