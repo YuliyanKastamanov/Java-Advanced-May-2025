@@ -7,59 +7,38 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-            int[] dimestions = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-            int x = dimestions[0];
-            int y = dimestions[1];
+        int[] matrixDimensions = readPositions(scanner.nextLine());
 
-            int[][] matrix = new int[x][y];
+        Galaxy galaxy = new Galaxy(new Field(matrixDimensions[0], matrixDimensions[1] ));
 
-            int value = 0;
-            for (int i = 0; i < x; i++)
-            {
-                for (int j = 0; j < y; j++)
-                {
-                    matrix[i][j] = value++;
-                }
-            }
+        String positions = scanner.nextLine();
+        long starPowerCollection = 0;
 
-            String command = scanner.nextLine();
-            long sum = 0;
-            while (!command.equals("Let the Force be with you"))
-            {
-                int[] ivoS = Arrays.stream(command.split(" ")).mapToInt(Integer::parseInt).toArray();
-                int[] evil = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-                int xE = evil[0];
-                int yE = evil[1];
+        while (!positions.equals("Let the Force be with you")) {
 
-                while (xE >= 0 && yE >= 0)
-                {
-                    if (xE >= 0 && xE < matrix.length && yE >= 0 && yE < matrix[0].length)
-                    {
-                        matrix[xE] [yE] = 0;
-                    }
-                    xE--;
-                    yE--;
-                }
-
-                int xI = ivoS[0];
-                int yI = ivoS[1];
-
-                while (xI >= 0 && yI < matrix[1].length)
-                {
-                    if (xI >= 0 && xI < matrix.length && yI >= 0 && yI < matrix[0].length)
-                    {
-                        sum += matrix[xI][yI];
-                    }
-
-                    yI++;
-                    xI--;
-                }
-
-                command = scanner.nextLine();
-            }
-
-        System.out.println(sum);
+            int[] jediPositions = readPositions(positions);
+            int[] evilPositions = readPositions(scanner.nextLine());
 
 
+            int evilRow = evilPositions[0];
+            int evilCol = evilPositions[1];
+            int jediRow = jediPositions[0];
+            int jediCow = jediPositions[1];
+
+           galaxy.moveEvil(evilRow, evilCol);
+
+
+           starPowerCollection += galaxy.moveJedi(jediRow, jediCow);
+
+            positions = scanner.nextLine();
+        }
+
+        System.out.println(starPowerCollection);
+
+
+    }
+
+    private static int[] readPositions(String positions) {
+        return Arrays.stream(positions.split(" ")).mapToInt(Integer::parseInt).toArray();
     }
 }
