@@ -1,4 +1,4 @@
-package L09_Iterators_and_Comparators.demo;
+package JavaAdvanced.L09_Iterators_and_Comparators.demo;
 
 import java.util.ArrayList;
 import java.util.Collection;
