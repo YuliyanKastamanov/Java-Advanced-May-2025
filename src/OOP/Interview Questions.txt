@@ -117,3 +117,15 @@ Junior Java Interview Questions:
 17. Can a class implement multiple interfaces in Java?
 	-> Yes! Java supports multiple inheritance using interfaces. A class can implement multiple interfaces,
 	helping to achieve modularity and flexibility.
+
+18. What is polymorphism?
+	-> Polymorphism is an OOP principle that allows the same method or function to behave differently based on the object that calls it.
+	It enables code reusability and flexibility.
+	-> Polymorphism in Java can be classified into two types:
+
+	->Compile-time Polymorphism (Method Overloading)
+	->Runtime Polymorphism (Method Overriding)
+
+19. What is difference between Method Overriding and Method Overloading?
+	-> Method Overloading = Same method name, different parameters (Compile-time polymorphism).
+	-> Method Overriding = Same method, same parameters, different behavior in subclass (Runtime polymorphism).
