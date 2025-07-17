@@ -129,3 +129,10 @@ Junior Java Interview Questions:
 19. What is difference between Method Overriding and Method Overloading?
 	-> Method Overloading = Same method name, different parameters (Compile-time polymorphism).
 	-> Method Overriding = Same method, same parameters, different behavior in subclass (Runtime polymorphism).
+
+20. SOLID
+	-> S - single responsibility -> една отговорност
+	-> O -> Open-Closed principle -> Отворен за разширяване, затворен за модификация
+	-> L -> Liskov substitution -> всеки един обект трябва да може да бъде заменен от негов наследник
+	-> I -> Interface Segregation - по-добре да имам повече интерфейси с малко методи в тях, отколкото 1 интерфейс с много методи
+	-> D -> Dependency Inversion -> разчитаме на абстракции, а не на имплементации
